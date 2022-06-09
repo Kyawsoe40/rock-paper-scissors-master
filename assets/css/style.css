@@ -47,6 +47,13 @@ body{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+.choice-section h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    font-size: 25px;
+}
 .choice-section .circle{
     padding: 20px;
     border-radius: 50%;
