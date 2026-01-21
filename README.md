@@ -1,1 +1,1 @@
-demo link-> https://rock-paper-scissors-master.netlify.app
+demo link-> https://kyawsoe40.github.io/rock-paper-scissors-master
