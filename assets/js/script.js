@@ -80,7 +80,7 @@ for(let b of gameBtn){
                 scoreField.textContent=score;
             }
             if(youLose==true){
-                score--;
+                if(score>0) score--;
                 console.log(score);
                 scoreField.textContent=score;
             }
