@@ -30,6 +30,7 @@ for(let b of gameBtn){
         gameSection.style.display='block';
         let img=document.createElement('img');
         let youWin=false;
+        let youLose=false;
         if(b.id=='paper'){
             circle1.id='game-paper';
             img.src='assets/img/icon-paper.svg';
@@ -50,9 +51,11 @@ for(let b of gameBtn){
             }else if(b.id=='paper' && draw=='scissors'){
                 result.textContent='You lose';
                 meme.src='assets/img/losememe.jfif';
+                youLose=true;
             }else if(b.id=='rock' && draw=='paper'){
                 result.textContent='You lose';
                 meme.src='assets/img/losememe.jfif';
+                youLose=true;
             }else if(b.id=='rock' && draw=='scissors'){
                 result.textContent='you win';
                 meme.src='assets/img/Clap Applause GIF by TWICE - Find & Share on GIPHY.gif';
@@ -63,7 +66,9 @@ for(let b of gameBtn){
                 youWin=true;
             }else if(b.id=='scissors' && draw=='rock'){
                 result.textContent='you lose';
+                youLose=true;
                 meme.src='assets/img/losememe.jfif';
+                youLose=true;
             }else{
                 result.textContent='draw';
                 meme.src='assets/img/drawmeme.jfif';
@@ -71,6 +76,11 @@ for(let b of gameBtn){
             document.querySelector('.result-box').style.display='block';
             if(youWin==true){
                 score++;
+                console.log(score);
+                scoreField.textContent=score;
+            }
+            if(youLose==true){
+                score--;
                 console.log(score);
                 scoreField.textContent=score;
             }
